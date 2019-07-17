@@ -1,8 +1,17 @@
-<dl>
-  <dt>Hero of the day</dt>
+<h2>Hero of the day: {{hero.name | uppercase}}</h2>
 
-</dl>
+<ul>
+  <li>
+      Hero details
+      <ul>
+          <li>ID: {{hero.id}}</li>
+          <li>NAME: {{hero.name}}</li>
+      </ul>
+  </li>
+</ul>
 
-<h2>{{hero.name | uppercase}} Details</h2>
-<div><span>id: </span>{{hero.id}}</div>
-<div><span>name: </span>{{hero.name}}</div>
+<div>
+  <label>Change hero's name:
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </label>
+</div>
